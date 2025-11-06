@@ -49,3 +49,10 @@ if len(duplicate_names) == 0:
     print("No duplicate names.")
 else:
     print(f"Duplicate names found: {duplicate_names}")
+
+track_summary = {}
+#I was unable to implement this part
+
+print("Participants per track:")
+for track in track_summary:
+    print(f"{track}: {track_summary[track]}")
