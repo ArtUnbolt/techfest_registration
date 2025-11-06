@@ -1,3 +1,5 @@
+from multiprocessing.reduction import duplicate
+
 print("Welcome to SMIT TechFest!")
 print("Event organized by Leonardo Yangzon of APPDAET BTCS2")
 
@@ -35,3 +37,15 @@ if len(c) < 2:
     print("Not enough variety in tracks.")
 else:
     print(f"Tracks offered in this event: {c}")
+
+duplicate_names = set()
+duplicate_check = set()
+for item in a:
+    if item in duplicate_check:
+        duplicate_names.add(item)
+    duplicate_check.add(item)
+
+if len(duplicate_names) == 0:
+    print("No duplicate names.")
+else:
+    print(f"Duplicate names found: {duplicate_names}")
